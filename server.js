@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Welcome Page',
         welcomeMessage: 'Welcome!'
-    })
+    });
 });
 
 app.get('/about', (req, res) => {
@@ -61,6 +61,13 @@ app.get('/bad', (req, res) => {
             message: 'There was an error',
             statusCode: 500
         }
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Portfolio Page',
+        message: 'Portfolio Page Here'
     });
 });
 
